@@ -48,13 +48,13 @@ f.line(x='x', y='y', source=source)
 #options = [("bitcoin","BTC"),("ethereum", "ETH"),("monero","XMR")]
 options = ["bitcoin","ethereum","monero"]
 radio_buttons = RadioButtonGroup(labels=options)
-radio_buttons.active = 0 # default is bitcoin
 radio_buttons.on_change("active", update_intermediate)
+radio_buttons.active = 0 # default is bitcoin
 
 l = layout([[radio_buttons]])
 
 # every second we'll generate a pair of coordinates
 curdoc().add_root(f)
 curdoc().add_root(l)
-curdoc().add_periodic_callback(update, 30000)  # every 1 minutes
+curdoc().add_periodic_callback(update, 210000)  # every 3.5 minutes
 

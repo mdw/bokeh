@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>template page</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" />
+  <link rel="stylesheet" href="{{ cdn_css|safe }}" />
+  <script src="{{ cdn_js|safe }}" type="text/javascript"></script>
+</head>
+<body>
+  <h3>Dynamic Content is Great</h3>
+  {{ script|safe }}
+  {{ div|safe }}
+  <p>here is the body text</p>
+</body>
+</html>
